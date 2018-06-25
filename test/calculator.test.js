@@ -1,9 +1,7 @@
 const assert = require('assert');
-const calc = require('../lib/calculator');
-const add = calc.add;
-const sub = calc.sub;
-const multiply = calc.multiply;
-const divide = calc.divide;
+const { add, sub, multiply, divide } = require('../lib/calculator');
+
+
 
 
 describe('calculator', () => {
@@ -28,7 +26,14 @@ describe('calculator', () => {
         assert.equal(quotient, 3);
     });
 
-    it('attempts to divide by 0', () => {
-        
+    it('throw error when attempts to divide by 0', () => {
+        try {
+            //run some code that we expect to fail
+            divide(3, 0);
+            assert.fail('Should have thrown error');
+        }
+        catch(err) {
+            assert.equal(err.message, 'Cannot divide by zero');
+        }
     });
 });
