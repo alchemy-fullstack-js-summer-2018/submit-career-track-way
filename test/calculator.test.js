@@ -5,13 +5,13 @@ const subtract = calc.subtract;
 
 describe('calculator', () => {
 
-  it('add two numbers', () => {
-    const sum = add(3, 4);
-    assert.equal(sum, 7);
-  });
+    it('add two numbers', () => {
+        const sum = add(3, 4);
+        assert.equal(sum, 7);
+    });
 
-  it('subtract two numbers',() => {
-    const diff = subtract(4, 3);
-    assert.equal(diff, 1);
-  });  
-})
+    it('subtract two numbers',() => {
+        const diff = subtract(4, 3);
+        assert.equal(diff, 1);
+    });  
+});
