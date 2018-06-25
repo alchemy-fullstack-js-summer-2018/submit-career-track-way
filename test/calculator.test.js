@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { add, subtract, multiply, divide} = require('../lib/calculator');
+const { add, subtract, multiply, divide } = require('../lib/calculator');
 
 describe('calculator', () => {
     it('add two numbers', () => {
