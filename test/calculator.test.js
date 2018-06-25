@@ -29,6 +29,8 @@ describe('calculator', () => {
             divide(3, 0);
             // if we get here, error didn't happen
             assert.fail('Should have thrown error');
+            // (NOTE: assert fail will _throw_, meaning error
+            // will be routed to catch)
         }
         catch(err) {
             // if error happens above, err here should
