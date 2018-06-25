@@ -1,9 +1,5 @@
 const assert = require('assert');
-const calc = require('../lib/calculator');
-const add = calc.add;
-const subtract = calc.subtract;
-const multiply = calc.multiply;
-const divide = calc.divide;
+const { add, subtract, multiply, divide} = require('../lib/calculator');
 
 describe('calculator', () => {
     it('add two numbers', () => {
@@ -27,5 +23,18 @@ describe('calculator', () => {
         assert.equal(quotient, 3);
     });
 
+    it('throws error when dividing by zero', () => {
+        try {
+            // run some code that we expect to throw error
+            divide(3, 0);
+            // if we get here, error didn't happen
+            assert.fail('should have thrown error');
+            // (NOTE: assert fail will _throw_, meaning error
+            // will be routed to catch)
+        }
+        catch(err) {
+            assert.equal(err.message, 'Cannot divide by zero');
+        }
+    });
 
 });
