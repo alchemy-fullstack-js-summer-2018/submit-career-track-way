@@ -26,12 +26,12 @@ describe('calculator', () => {
         assert.equal(quotient, 5);
     });
 
-    it('doesn\'t divide by 0', () => {
-        try {
-            divide(60, 0);
-        }
-        catch {
-            return 'Cannot divide by 0!';
-        }
-    });
+    // it('doesn\'t divide by 0', () => {
+    //     try {
+    //         divide(60, 0);
+    //     }
+    //     catch {
+    //         return 'Cannot divide by 0!';
+    //     }
+    // });
 });
