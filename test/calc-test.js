@@ -22,5 +22,9 @@ describe('calc', () => {
         const quot = divide(4, 2);
         assert.equal(quot, 2);
     });
-         
+    it('throws an error when dividing by zero', () => {
+        const zero = divide(4, 0);
+        assert.equal(zero, Infinity);
+    });
+    
 });
