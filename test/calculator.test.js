@@ -3,6 +3,7 @@ const calc = require('../lib/calculator');
 const add = calc.add;
 const subtract = calc.subtract;
 const multiply = calc.multiply;
+const divide = calc.divide;
 
 describe('calculator', () => {
 
@@ -18,5 +19,9 @@ describe('calculator', () => {
     it('multiply two numbers', () => {
         const product = multiply(2, 3);
         assert.equal(product, 6);
-    });   
+    });  
+    it('divides tow numbers', () => {
+        const quotient = divide(8, 4);
+        assert.equal(quotient, 2); 
+    }); 
 });
