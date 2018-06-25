@@ -1,9 +1,5 @@
 const assert = require('assert');
-const calc = require('../lib/calculator');
-const add = calc.add;
-const subtract = calc.subtract;
-const multiply = calc.multiply;
-const divide = calc.divide;
+const { add, subtract, multiply, divide } = require('../lib/calculator');
 
 describe('calculator', () => {
     it('adds two numbers', () => {
@@ -26,12 +22,13 @@ describe('calculator', () => {
         assert.equal(quotient, 5);
     });
 
-    // it('doesn\'t divide by 0', () => {
-    //     try {
-    //         divide(60, 0);
-    //     }
-    //     catch {
-    //         return 'Cannot divide by 0!';
-    //     }
-    // });
+    it('doesn\'t divide by 0', () => {
+        try {
+            divide(3, 0);
+            assert.fail('should have thrown error');
+        }
+        catch(err) {
+            assert.equal(err.message, 'Cannot divide by zero');
+        }
+    });
 });
