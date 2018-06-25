@@ -11,7 +11,7 @@ describe('calculator', () => {
         assert.equal(sum, 7);
     });
 
-    it('subtract two numbers', () => {
+    it('subtracts two numbers', () => {
         const result = subtract(3, 2);
         assert.equal(result, 1);
     });
@@ -24,5 +24,15 @@ describe('calculator', () => {
     it('divides two numbers', () => {
         const quotient = divide(4, 2);
         assert.equal(quotient, 2);
-    })
+    });
+
+    it('throws errors when dividing by zero', () => {
+        try {
+            divide(6, 0);
+            assert.fail('should throw error');
+        }
+        catch(err) {
+            assert.equal(err.message, 'Cannot divide by zero');
+        }
+    });
 });
