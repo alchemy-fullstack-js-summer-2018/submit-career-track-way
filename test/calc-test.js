@@ -23,8 +23,16 @@ describe('calc', () => {
         assert.equal(quot, 2);
     });
     it('throws an error when dividing by zero', () => {
-        const zero = divide(4, 0);
-        assert.equal(zero, Infinity);
+        try {
+            //run some code that has an error
+            divide(3, 0);
+            //if we get here, error didn't happen
+            assert.fail('should have thrown an error');
+        }
+        catch(err){
+            //if error happens above
+            assert.equal(err.message, 'Cannot divide by zero');
+        }
     });
     
 });
