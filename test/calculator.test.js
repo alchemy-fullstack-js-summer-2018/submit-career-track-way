@@ -29,15 +29,16 @@ describe('calculator', () => {
     it('throws error when diving by zero', () => {
         try {
             // run some code that we expect to throw error
-            divide(3,0);
+            divide(3, 0);
             // if we get here, error didn't happen
-            assert.fall('should have thrown error');
-            // (NOTE:)
-
+            assert.fail('Should have thrown error');
+            // (NOTE: assert fail will _throw_, meaning error
+            // will be routed to catch)
         }
         catch(err) {
-
+            // if error happens above, err here should
+            // be the divide by zero error
+            assert.equal(err.message, 'Cannot divide by zero');
         }
-
     });
 });
