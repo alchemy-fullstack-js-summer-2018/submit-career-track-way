@@ -1,9 +1,11 @@
 const calc = require('../lib/calculator');
 const assert = require('assert');
-const add = calc.add;
-const subtract = calc.subtract;
-const multiply = calc.multiply;
-const divide = calc.divide;
+// const add = calc.add;
+// const subtract = calc.subtract;
+// const multiply = calc.multiply;
+// const divide = calc.divide;
+const { add, subtract, multiply, divide } = calc;
+//this is the same as the above variables because it is a new ES6 feature for making things easier
 
 describe('calculator', () => {
 
@@ -25,5 +27,20 @@ describe('calculator', () => {
     it('divides two numbers', () => {
         const quotient = divide(12, 6);
         assert.equal(quotient, 2);
+    });
+
+    it('throws a new error if someone is trying to divide by 0', () => {
+        try {
+            //run code we want to throw error
+            divide(3, 0);
+            //if we get here, error didnt happen
+            assert.fail('should have thrown an error');
+        }
+        catch(err) {
+            //if error happens above, err here should
+            //be the divide by 0 error
+            assert.equal(err.message, 'DO NOT DIVIDE BY 0 PLEASE AND THANK YOU');
+
+        }
     });
 });
