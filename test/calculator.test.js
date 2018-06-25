@@ -2,6 +2,7 @@ const assert = require('assert');
 const calc = require('../lib/calculator');
 const add = calc.add;
 const subtract = calc.subtract;
+const multiply = calc.multiply;
 
 describe('calculator', () => {
 
@@ -14,4 +15,8 @@ describe('calculator', () => {
         const diff = subtract(4, 3);
         assert.equal(diff, 1);
     });  
+    it('multiply two numbers', () => {
+        const product = multiply(2, 3);
+        assert.equal(product, 6);
+    });   
 });
