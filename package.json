@@ -14,7 +14,6 @@
   "scripts": {
     "lint": "eslint",
     "pretetst": "npm run lint",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "test:mocha": "mocha",
     "start": "npm run tet:mocha -- w"
   },
