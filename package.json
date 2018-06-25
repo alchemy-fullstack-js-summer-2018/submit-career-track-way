@@ -8,7 +8,7 @@
     "pretest": "npm run lint",
     "test": "npm run test:mocha",
     "test:mocha": "mocha",
-    "start": "npm run test -- -w"
+    "start": "npm run test:mocha -- -w"
   },
   "repository": {
     "type": "git",
