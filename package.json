@@ -1,7 +1,6 @@
 {
   "name": "submit-career-track-way",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
@@ -19,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/soundparticle/submit-career-track-way/issues"
   },
-  "homepage": "https://github.com/soundparticle/submit-career-track-way#readme"
+  "homepage": "https://github.com/soundparticle/submit-career-track-way#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "description": "",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
 }
