@@ -9,7 +9,7 @@ Submit an assignment the Career Track way!
 1. Clone your forked repo locally (`git clone ...`)
 1. Start a branch (`git checkout -b dev`)
 1. Essentials
-    * `.eslintrc` 
+    * `.eslintrc`
     * `.gitignore`
     * `.travis.yml`
     * `package.json`
