@@ -1,0 +1,19 @@
+{
+  "name": "401",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint",
+    "pretetst": "npm run lint",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:mocha": "mocha",
+    "start": "npm run tet:mocha -- w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.0.0",
+    "mocha": "^5.2.0"
+  }
+}
