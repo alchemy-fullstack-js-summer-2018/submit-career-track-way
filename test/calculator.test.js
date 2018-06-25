@@ -26,6 +26,20 @@ describe('calculator', () => {
     });
 
     it('throws error when dividing by zero', () => {
+        try {
+            // run some code that we expect to throw errors
+            divide(3, 0)
+            ;
+            // if we get here, error didn't happen
+            assert.fail('should have thrown error');
+            // (NOTE: assert fail will _throw)
+
+        }
+        catch(err) {
+        // if error happens above, err should 
+        // be the divide by zero error
+            assert.equal(err.message, 'Cannot divide by zero');
+        }
 
     });
 });
